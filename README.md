@@ -42,7 +42,7 @@ The manager keeps a small durable record, delegates independent work, reviews ev
 
 This workflow uses ordinary chats and a saved automation rather than activating Goal mode. It requires a Codex environment with chat coordination and same-chat scheduling tools. Local scheduled work requires the host and desktop app to remain running. If a capability is unavailable, the skill reports the limitation instead of claiming background work is active.
 
-The per-session subagent concurrency setting does not establish a global cap on independent runner chats. The manager enforces the requested runner limit.
+The per-session subagent concurrency setting does not establish a global cap on independent runner chats. The manager enforces the requested runner limit. See the [optional subagent configuration](skills/manage-project/references/codex-runtime.md#optional-subagent-concurrency-setting) for Matija's clarification of the two-subagent setting.
 
 If installed, `communicate-clearly` supplies additional handoff and reporting guidance. Essential communication principles are included in `manage-project`, so the companion is optional.
 
