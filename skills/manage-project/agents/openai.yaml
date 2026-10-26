@@ -1,0 +1,3 @@
+interface:
+  display_name: "Manage Project"
+  short_description: "Coordinate runners, steers, and scheduled follow-ups"

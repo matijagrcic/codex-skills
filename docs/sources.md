@@ -1,0 +1,14 @@
+# Sources and design
+
+The workflow combines a persistent manager, written steering history, independent runners, and a same-chat heartbeat. The default cadence and concurrency are adjustable design choices.
+
+- [Eric Provencher, 24 October 2026](https://x.com/pvncher/status/2113794328690647521) recommends a manager, scheduled polling of runners in separate threads, and reconciliation of written steers before new work. His [follow-up](https://x.com/pvncher/status/2113805871746552062) compares the pattern with Dots and older Goal usage. These are practitioner recommendations, not controlled comparative results.
+- [Provencher's orchestrate skill](https://github.com/provencher/codex-skills/tree/main/orchestrate) informs focused delegation, clear ownership, responsive coordination, and leaf-worker boundaries. Its MIT notice is retained. The upstream skill itself does not implement the heartbeat or steer ledger.
+- [Anthropic on folding subagents into the main loop](https://claude.com/resources/articles/building-agents-when-to-fold-subagents-into-your-main-agent-loop) supports keeping shared reasoning together and using separate agents where independence, verification, or isolation justify them.
+- [Codex scheduled tasks](https://learn.chatgpt.com/docs/automations) document recurring work and local execution requirements. [Subagent configuration](https://learn.chatgpt.com/docs/agent-configuration/subagents#global-settings) describes session-scoped concurrency; it is not a global runner-chat budget.
+- [Codex long-running work](https://learn.chatgpt.com/docs/long-running-work) continues to describe Goals. This skill offers an alternative operating pattern and does not claim that Goals are deprecated.
+- [Rethinking skills and prompts for GPT-6 Astra](https://learn.chatgpt.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra) supports concise, adaptable guidance with clear completion and persistence boundaries.
+
+The optional `communicate-clearly` companion is a local skill used when developing this workflow. It is not bundled or downloaded automatically. The manager includes essential communication guidance so this repository has no hard dependency on that local installation.
+
+The reference interfaces were checked on 26 October 2026. Active tool contracts and user instructions govern actual execution. Evaluate the workflow by task completion, correction burden, elapsed time, usage, and recovery after interruption.
