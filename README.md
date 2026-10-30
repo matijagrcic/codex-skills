@@ -4,7 +4,7 @@ Reusable Codex skills by Matija Grcic.
 
 | Skill | Purpose |
 | --- | --- |
-| [manage-project](skills/manage-project/SKILL.md) | Coordinate a persistent manager chat, bounded runner chats, written steers, and scheduled progress checks. |
+| [manage-project](skills/manage-project/SKILL.md) | Coordinate a persistent manager, runners, written steers, and scheduled checks; keep project chat titles easy to scan. |
 
 **Install**
 
@@ -45,6 +45,21 @@ This workflow uses ordinary chats and a saved automation rather than activating 
 The per-session subagent concurrency setting does not establish a global cap on independent runner chats. The manager enforces the requested runner limit. See the [optional subagent configuration](skills/manage-project/references/codex-runtime.md#optional-subagent-concurrency-setting) for Matija's clarification of the two-subagent setting.
 
 If installed, `communicate-clearly` supplies additional handoff and reporting guidance. Essential communication principles are included in `manage-project`, so the companion is optional.
+
+**Readable task titles**
+
+The skill names managed chats with a clear action and specific target, such as `Investigating checkout timeouts` or `Verifying checkout retries`. It follows Shreya Shankar's [article on readable AI text at scale](https://fsdatalab.github.io/blog/agent-text-at-scale/): consistent structure and vocabulary, distinctive words early, and variation that communicates real differences. Completion wording requires evidence.
+
+You can also use it just to organize existing titles:
+
+```text
+Use $manage-project to rename the tasks in [project name] according to
+its task-naming guidance. Read enough context to name each task accurately,
+keep the titles consistent and easy to scan, and verify the saved changes.
+Report any tasks you could not inspect or rename.
+```
+
+This naming-only request does not start runners or a heartbeat. See [Task naming](skills/manage-project/references/task-naming.md) for examples and project-scoping rules.
 
 See [sources and design](docs/sources.md) for the evidence behind the workflow. No claim is made that this approach universally outperforms Goals.
 

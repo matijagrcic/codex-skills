@@ -1,11 +1,13 @@
 ---
 name: manage-project
-description: Coordinate sustained project work through a persistent manager chat, bounded runner chats, durable steers, and scheduled progress checks. Use when the user wants ongoing supervision across independent workstreams; ordinary one-off tasks do not need this workflow.
+description: Coordinate sustained project work through a persistent manager chat, bounded runner chats, durable steers, and scheduled progress checks. Also organize project chat titles for easy scanning and retrieval. Use for ongoing supervision across independent workstreams or a request to rename project tasks; naming alone does not start supervision.
 ---
 
 # Manage Project
 
 Keep the objective, shared reasoning, and decisions in one manager chat. Delegate bounded work that benefits from parallel execution, investigation, or independent verification. Keep tightly coupled decisions together. Use ordinary runner chats and scheduled follow-up; do not activate Goal mode for this workflow.
+
+For a naming-only request, follow [Task naming](references/task-naming.md) and stop after the requested renames and verification. Do not create runners, manager records, or a heartbeat for that request. Other ordinary one-off tasks do not need the supervision workflow below.
 
 ## Establish scope and authority
 
@@ -32,6 +34,8 @@ Record new user direction before the next dispatch or acceptance decision. Recon
 Unless the user chooses otherwise, keep at most two runners active in addition to the manager. This is a working default, not a claim about an optimal number. Reuse suitable idle runners and avoid overlapping assignments.
 
 Give each runner its outcome, context, applicable steers, ownership, constraints, completion criteria, and required artifacts. Runners are leaf workers by default: no further agents, chats, Goals, or schedules. Use exclusive file ownership or isolated worktrees for concurrent edits; serialize integration. Preserve the configured model unless the user requests a change.
+
+Use [Task naming](references/task-naming.md) when creating or retitling managed chats: make the action and specific target easy to scan, keep vocabulary consistent, and match any progress claim to evidence. Keep chat IDs as durable identities. A project-wide title cleanup requires a request covering that scope.
 
 Use `communicate-clearly` when installed, including its agent-coordination reference. Pass its location or relevant guidance to each runner. If unavailable, keep handoffs self-contained: identify the action and owner, preserve scope and authority, and separate observations, assumptions, plans, reported outcomes, and verified results. Reports should include evidence, verification limits, and remaining work or blockers. Use explicit labels only when they prevent misunderstanding; do not add routine acknowledgment ceremonies.
 
