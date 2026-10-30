@@ -4,7 +4,7 @@ Reusable Codex skills by Matija Grcic.
 
 | Skill | Purpose |
 | --- | --- |
-| [manage-project](skills/manage-project/SKILL.md) | Carry sustained implementation and research through a persistent manager, runners, written steers, and scheduled checks. |
+| [steer-work](skills/steer-work/SKILL.md) | Carry sustained implementation and research through a persistent manager, runners, written steers, and scheduled checks. |
 | [name-tasks](skills/name-tasks/SKILL.md) | Name or rename Codex chats with accurate, consistent titles that are easy to scan. |
 
 **Install**
@@ -12,8 +12,8 @@ Reusable Codex skills by Matija Grcic.
 Ask Codex to install either skill from its folder:
 
 ```text
-Use $skill-installer to install manage-project from
-https://github.com/matijagrcic/codex-skills/tree/main/skills/manage-project
+Use $skill-installer to install steer-work from
+https://github.com/matijagrcic/codex-skills/tree/main/skills/steer-work
 ```
 
 ```text
@@ -23,12 +23,14 @@ https://github.com/matijagrcic/codex-skills/tree/main/skills/name-tasks
 
 Each skill works independently and will be available on the next turn after installation.
 
-**Use manage-project**
+`steer-work` was previously named `manage-project`. The [old entry](skills/manage-project/SKILL.md) remains as a compatibility pointer for existing prompts and shared links; new installations and invocations should use `steer-work`.
 
-Start in the project you want managed. Give the manager an outcome and a way to verify it:
+**Use steer-work**
+
+Start in the workspace where the work belongs. Give the agent an outcome and a way to verify it:
 
 ```text
-Use $manage-project for this project.
+Use $steer-work to carry this work through to verified completion.
 
 Outcome: [desired result]
 Constraints: [requirements and exclusions]
@@ -48,9 +50,9 @@ The manager keeps a small durable record, delegates independent work, reviews ev
 
 This workflow uses ordinary chats and a saved automation rather than activating Goal mode. It requires a Codex environment with chat coordination and same-chat scheduling tools. Local scheduled work requires the host and desktop app to remain running. If a capability is unavailable, the skill reports the limitation instead of claiming background work is active.
 
-The per-session subagent concurrency setting does not establish a global cap on independent runner chats. The manager enforces the requested runner limit. See the [optional subagent configuration](skills/manage-project/references/codex-runtime.md#optional-subagent-concurrency-setting) for Matija's clarification of the two-subagent setting.
+The per-session subagent concurrency setting does not establish a global cap on independent runner chats. The manager enforces the requested runner limit. See the [optional subagent configuration](skills/steer-work/references/codex-runtime.md#optional-subagent-concurrency-setting) for Matija's clarification of the two-subagent setting.
 
-If installed, `communicate-clearly` supplies additional handoff and reporting guidance. Essential communication principles are included in `manage-project`, so the companion is optional.
+If installed, `communicate-clearly` supplies additional handoff and reporting guidance. Essential communication principles are included in `steer-work`, so the companion is optional.
 
 **Use name-tasks**
 

@@ -13,6 +13,6 @@ The workflow combines a persistent manager, written steering history, independen
 
 The optional `communicate-clearly` companion is a local skill used when developing this workflow. It is not bundled or downloaded automatically. The manager includes essential communication guidance so this repository has no hard dependency on that local installation.
 
-Task naming is packaged separately so title cleanup does not invoke project supervision. `manage-project` can use `name-tasks` when installed, but neither skill requires the other.
+Task naming is packaged separately so title cleanup does not invoke project supervision. `steer-work` can use `name-tasks` when installed, but neither skill requires the other.
 
 The coordination interfaces were checked on 26 October 2026; the naming guidance and title-management tool contracts were checked on 30 October 2026. Active tool contracts and user instructions govern actual execution. Evaluate the workflow by task completion, correction burden, elapsed time, usage, and recovery after interruption.

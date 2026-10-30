@@ -5,7 +5,7 @@ description: Name or rename Codex tasks, threads, and chats so their titles are 
 
 # Name Tasks
 
-Make each title identify the actual work and distinguish it from neighboring chats. In Codex, tasks, threads, and chats refer to the same conversations. This skill works independently of `manage-project`.
+Make each title identify the actual work and distinguish it from neighboring chats. In Codex, tasks, threads, and chats refer to the same conversations. This skill works independently of `steer-work`.
 
 ## Establish the target and requested action
 
