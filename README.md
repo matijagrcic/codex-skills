@@ -4,20 +4,26 @@ Reusable Codex skills by Matija Grcic.
 
 | Skill | Purpose |
 | --- | --- |
-| [manage-project](skills/manage-project/SKILL.md) | Coordinate a persistent manager, runners, written steers, and scheduled checks; keep project chat titles easy to scan. |
+| [manage-project](skills/manage-project/SKILL.md) | Carry sustained implementation and research through a persistent manager, runners, written steers, and scheduled checks. |
+| [name-tasks](skills/name-tasks/SKILL.md) | Name or rename Codex chats with accurate, consistent titles that are easy to scan. |
 
 **Install**
 
-Ask Codex to install the skill:
+Ask Codex to install either skill from its folder:
 
 ```text
 Use $skill-installer to install manage-project from
 https://github.com/matijagrcic/codex-skills/tree/main/skills/manage-project
 ```
 
-The skill will be available on the next turn after installation.
+```text
+Use $skill-installer to install name-tasks from
+https://github.com/matijagrcic/codex-skills/tree/main/skills/name-tasks
+```
 
-**Use**
+Each skill works independently and will be available on the next turn after installation.
+
+**Use manage-project**
 
 Start in the project you want managed. Give the manager an outcome and a way to verify it:
 
@@ -46,20 +52,20 @@ The per-session subagent concurrency setting does not establish a global cap on 
 
 If installed, `communicate-clearly` supplies additional handoff and reporting guidance. Essential communication principles are included in `manage-project`, so the companion is optional.
 
-**Readable task titles**
+**Use name-tasks**
 
-The skill names managed chats with a clear action and specific target, such as `Investigating checkout timeouts` or `Verifying checkout retries`. It follows Shreya Shankar's [article on readable AI text at scale](https://fsdatalab.github.io/blog/agent-text-at-scale/): consistent structure and vocabulary, distinctive words early, and variation that communicates real differences. Completion wording requires evidence.
+`name-tasks` gives chats a clear action and specific target, such as `Investigating checkout timeouts` or `Verifying checkout retries`. It follows Shreya Shankar's [article on readable AI text at scale](https://fsdatalab.github.io/blog/agent-text-at-scale/): consistent structure and vocabulary, distinctive words early, and variation that communicates real differences. Completion wording requires evidence.
 
-You can also use it just to organize existing titles:
+Use it for the current chat, selected chats, or a project's titles:
 
 ```text
-Use $manage-project to rename the tasks in [project name] according to
-its task-naming guidance. Read enough context to name each task accurately,
-keep the titles consistent and easy to scan, and verify the saved changes.
+Use $name-tasks to rename the tasks in [project name]. Read enough context
+to name each task accurately, keep the titles consistent and easy to scan,
+and verify the saved changes.
 Report any tasks you could not inspect or rename.
 ```
 
-This naming-only request does not start runners or a heartbeat. See [Task naming](skills/manage-project/references/task-naming.md) for examples and project-scoping rules.
+For suggestions without changes, ask: `Use $name-tasks to propose a clearer title for this chat.` Naming does not start runners or a heartbeat. The full workflow lives in [name-tasks](skills/name-tasks/SKILL.md); the earlier task-naming reference remains as a compatibility link.
 
 See [sources and design](docs/sources.md) for the evidence behind the workflow. No claim is made that this approach universally outperforms Goals.
 
