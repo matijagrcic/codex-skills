@@ -6,10 +6,11 @@ Reusable Codex skills by Matija Grcic.
 | --- | --- |
 | [steer-work](skills/steer-work/SKILL.md) | Carry sustained implementation and research through a persistent manager, runners, written steers, and scheduled checks. |
 | [name-tasks](skills/name-tasks/SKILL.md) | Name or rename Codex chats with accurate, consistent titles that are easy to scan. |
+| [situational-awareness](skills/situational-awareness/SKILL.md) | Make the current situation, evidence, and corrections visible across participants and distribute reasoning across complementary roles. |
 
 **Install**
 
-Ask Codex to install either skill from its folder:
+Ask Codex to install the skill you want from its folder.
 
 ```text
 Use $skill-installer to install steer-work from
@@ -19,6 +20,11 @@ https://github.com/matijagrcic/codex-skills/tree/main/skills/steer-work
 ```text
 Use $skill-installer to install name-tasks from
 https://github.com/matijagrcic/codex-skills/tree/main/skills/name-tasks
+```
+
+```text
+Use $skill-installer to install situational-awareness from
+https://github.com/matijagrcic/codex-skills/tree/main/skills/situational-awareness
 ```
 
 Each skill works independently and will be available on the next turn after installation.
@@ -68,6 +74,16 @@ Report any tasks you could not inspect or rename.
 ```
 
 For suggestions without changes, ask: `Use $name-tasks to propose a clearer title for this chat.` Naming does not start runners or a heartbeat. The full workflow lives in [name-tasks](skills/name-tasks/SKILL.md); the earlier task-naming reference remains as a compatibility link.
+
+**Use situational-awareness**
+
+```text
+Use $situational-awareness to make the current state and exceptions visible
+across this work. Check what each participant can see, how corrections reach
+them, and which independent checks would improve our next decisions.
+```
+
+Use it on its own or with `steer-work`. [Norman’s cockpit example](skills/situational-awareness/references/cockpit.md) shows how the arrangement of controls helps pilots stay aware of each other’s actions.
 
 See [sources and design](docs/sources.md) for the evidence behind the workflow. No claim is made that this approach universally outperforms Goals.
 
