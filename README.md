@@ -7,6 +7,7 @@ Reusable Codex skills by Matija Grcic.
 | [steer-work](skills/steer-work/SKILL.md) | Carry sustained implementation and research through a persistent manager, runners, written steers, and scheduled checks. |
 | [name-tasks](skills/name-tasks/SKILL.md) | Name or rename Codex chats with accurate, consistent titles that are easy to scan. |
 | [situational-awareness](skills/situational-awareness/SKILL.md) | Make the current situation, evidence, and corrections visible across participants and distribute reasoning across complementary roles. |
+| [show-me-arhitecture](skills/show-me-arhitecture/SKILL.md) | Propose or explain software architecture with Mermaid diagrams, typed interfaces, and clear ownership of data and state. |
 
 **Install**
 
@@ -25,6 +26,11 @@ https://github.com/matijagrcic/codex-skills/tree/main/skills/name-tasks
 ```text
 Use $skill-installer to install situational-awareness from
 https://github.com/matijagrcic/codex-skills/tree/main/skills/situational-awareness
+```
+
+```text
+Use $skill-installer to install show-me-arhitecture from
+https://github.com/matijagrcic/codex-skills/tree/main/skills/show-me-arhitecture
 ```
 
 Each skill works independently and will be available on the next turn after installation.
